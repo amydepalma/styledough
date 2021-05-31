@@ -1,0 +1,21 @@
+/* ----------------------------------------------------
+RESPONSIVE IFRAME
+The responsive iframe container can be used to ensure 
+that its contents scale to the width of its parent 
+element while retaining an aspect ratio of 16:9.
+1) 16:9 aspect ratio
+---------------------------------------------------- */
+.responsive-iframe {
+	position: relative;
+	padding-bottom: 56.25%; /* 1 */
+	width: 100%;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+        height: 100%;
+        border: none;
+	}
+}

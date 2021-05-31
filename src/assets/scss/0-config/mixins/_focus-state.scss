@@ -1,0 +1,13 @@
+/* ----------------------------------------------------
+STYLE FOR FOCUSED STATES
+Light or dark versions
+---------------------------------------------------- */
+@mixin focusState() {
+    outline: 0;
+    box-shadow: 0 0 4px 2px $ice;
+}
+
+@mixin focusStateDark() {
+    outline: 0;
+    box-shadow: 0 0 4px 2px rgba($white, .85);
+}

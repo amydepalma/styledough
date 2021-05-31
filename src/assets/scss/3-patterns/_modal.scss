@@ -1,0 +1,111 @@
+// ----------------------------------------------------
+// "mfp-" of these are Magnific Popup overrides
+// ----------------------------------------------------
+.mfp-bg {
+	z-index: 100000;
+}
+
+.mfp-container {
+	padding: 0;
+
+	@media ($bp-md-up) {
+		padding: 32px 8px;
+	}
+}
+
+.mfp-wrap {
+	z-index: 100001;
+}
+
+// Content
+.modal {
+	position: relative;
+	background: $white;
+	width: auto;
+	max-width: 1024px;
+	margin: 0 auto;
+	height: 100vh;
+
+	@media ($bp-md-up) {
+		height: auto;
+	}
+
+	> div[role='document'] {
+		height: auto;
+		max-height: 100vh;
+		overflow-y: auto;
+		padding: 32px 24px 16px 16px;
+		border: 8px solid $white;
+
+		@media ($bp-md-up) {
+			max-height: 85vh;
+			padding: 32px 48px 32px 32px;
+		}
+	}
+
+	.mfp-close {
+		border: none;
+		font-size: 40px;
+
+		&:active,
+		&:hover,
+		&:focus {
+			color: $pumpkin;
+			border: none;
+		}
+	}
+}
+
+// Input only
+.input-modal {
+	position: relative;
+	width: auto;
+	max-width: 1024px;
+	margin: 0 auto;
+
+	// > div[role='document'] {
+	// }
+
+	.mfp-close {
+        display: none;
+	}
+}
+
+// Zoom Effect
+.mfp-zoom-in {
+	/* start state */
+	.mfp-with-anim {
+		opacity: 0;
+		transition: all 0.2s ease-in-out;
+		transform: scale(0.8);
+	}
+
+	&.mfp-bg {
+		opacity: 0;
+		transition: all 0.3s ease-out;
+	}
+
+	/* animate in */
+	&.mfp-ready {
+		.mfp-with-anim {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		&.mfp-bg {
+			opacity: 0.8;
+		}
+	}
+
+	/* animate out */
+	&.mfp-removing {
+		.mfp-with-anim {
+			transform: scale(0.8);
+			opacity: 0;
+		}
+
+		&.mfp-bg {
+			opacity: 0;
+		}
+	}
+}

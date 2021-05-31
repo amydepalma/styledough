@@ -1,0 +1,90 @@
+/* ----------------------------------------------------
+SETTINGS
+---------------------------------------------------- */
+$table-cell-padding:        $spacing-base * 1.25;
+$table-cell-padding-sm:     $spacing-base / 1.25;
+$table-margin-bottom:       $spacing-type-flow;
+
+$table-font-size:           null;
+$table-font-size-sm:        14px;
+
+$table-text:                lighten($body-text-color, 15%);
+$table-bkg:                 rgba($cloud-xlight, .25);
+$table-accent-bkg:          $white;
+
+$table-hover:               false;
+$table-hover-color:         $table-text;
+$table-hover-bkg:           rgba($black, .075);
+
+$table-border-width:        1px;
+$table-border-color:        rgba($black, .085);
+
+$table-head-text:           $table-text;
+$table-head-bkg:            lighten($black, 95%);
+
+$table-striped-order:       even;
+
+$table-caption-color:       $cloud;
+
+/* ----------------------------------------------------
+STYLES
+---------------------------------------------------- */
+table {
+    width: 100%;
+    color: $table-text;
+    font-size: $table-font-size;
+	background-color: $table-bkg;
+    margin-bottom: $table-margin-bottom;
+    border: 2px solid none;
+
+    th, td {
+		padding: $table-cell-padding;
+		vertical-align: middle;
+		border-top: $table-border-width solid $table-border-color;
+	}
+
+	thead th {
+        color: $table-head-text;
+        background-color: $table-head-bkg;
+		vertical-align: bottom;
+		border-bottom: ($table-border-width*2) solid $table-border-color;
+	}
+
+    tbody {
+        + tbody {
+            border-top: ($table-border-width*2) solid $table-border-color;
+        }
+    
+        tr, th {
+            font-weight: $font-weight-normal;
+
+            &:nth-of-type(#{$table-striped-order}) {
+                background-color: $table-accent-bkg;
+            }
+
+            @if $table-hover {
+                &:hover {
+                    color: $table-hover-color;
+                    background-color: $table-hover-bkg;
+                }
+            }
+        }
+    }
+
+    caption {
+        padding-top: $spacing-base;
+        text-align: left;
+        caption-side: bottom;
+        color: $table-caption-color;
+    }
+}
+
+// Wrap the <table> in <div class="table-responsive"> 
+// to create a responsive table
+.table-responsive {
+    @include customScrollbarHorz();
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

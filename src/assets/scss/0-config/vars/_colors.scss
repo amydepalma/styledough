@@ -1,0 +1,131 @@
+/* ----------------------------------------------------
+BRAND
+---------------------------------------------------- */
+$cherry:          #E31937;
+$cherry-light:    #ffc9d1;
+$cherry-dark:     #6f0b1a;
+
+$beet:            #991F3D;
+$beet-light:      #e6dadd;
+$beet-dark:       #660a21;
+
+$ice:             #99bfcc;
+$ice-dark:        #6ba1b3;
+$ice-mdark:       #407080;
+$ice-xdark:       #2e6073;
+$ice-xxdark:      #20424e;
+
+$pumpkin:         #FF6A00;
+$pumpkin-light:   #f2ddce;
+$pumpkin-dark:    #803500;
+
+$honey:           #F2A200;
+$honey-light:     #f2e6ce;
+$honey-dark:      #cc8800;
+
+$cloud-xlight:    #e4e8eb;
+$cloud-light:     #ced4d9;
+$cloud:           #AAAFB3;
+$cloud-dark:      #737B80;
+$cloud-xdark:     #505659;
+$cloud-xxdark:    #2b3033;
+
+$b-colors: ();
+$b-colors: map-merge(
+  (
+    "cherry": $cherry,
+    "cherry-light": $cherry-light,
+    "cherry-dark": $cherry-dark,
+    "beet": $beet,
+    "beet-light": $beet-light,
+    "beet-dark": $beet-dark,
+    "ice": $ice,
+    "ice-dark": $ice-dark,
+    "ice-mdark": $ice-mdark,
+    "ice-xdark": $ice-xdark,
+    "ice-xxdark": $ice-xxdark,
+    "pumpkin": $pumpkin,
+    "pumpkin-light": $pumpkin-light,
+    "pumpkin-dark": $pumpkin-dark,
+    "honey": $honey,
+    "honey-light": $honey-light,
+    "honey-dark": $honey-dark,
+    "cloud-xlight": $cloud-xlight,
+    "cloud-light": $cloud-light,
+    "cloud": $cloud,
+    "cloud-dark": $cloud-dark,
+    "cloud-xdark": $cloud-xdark,
+    "cloud-xxdark": $cloud-xxdark
+  ),
+  $b-colors
+);
+
+/* ----------------------------------------------------
+UTILITY
+---------------------------------------------------- */
+$white:   #FFFFFF;
+$black:   #000000;
+$trans:   rgba(255, 255, 255, 0);
+
+$u-colors: ();
+$u-colors: map-merge(
+  (
+    "white": $white,
+    "black": $black,
+    "trans": $trans,
+  ),
+  $u-colors
+);
+
+/* ----------------------------------------------------
+FEEDBACK
+---------------------------------------------------- */
+$muted:           #BEBEBE;
+$muted-light:     $cloud-light;
+$muted-dark:      $cloud-dark;
+
+$info:            $ice-dark;
+$info-light:      $ice;
+$info-dark:       $ice-xdark;
+
+$warning:         $pumpkin;
+$warning-light:   $pumpkin-light;
+$warning-dark:    $pumpkin-dark;
+
+$success:         #007535;
+$success-light:   #DCE6CC;
+$success-dark:    #00464D;
+
+$error:           $cherry;
+$error-light:     $cherry-light;
+$error-dark:      $cherry-dark;
+
+$f-colors: ();
+$f-colors: map-merge(
+  (
+    "muted": $muted,
+    "muted-light": $muted-light,
+    "muted-dark": $muted-dark,
+    "info": $info,
+    "info-light": $info-light,
+    "info-dark": $info-dark,
+    "warning": $warning,
+    "warning-light": $warning-light,
+    "warning-dark": $warning-dark,
+    "success": $success,
+    "success-light": $success-light,
+    "success-dark": $success-dark,
+    "error": $error,
+    "error-light": $error-light,
+    "error-dark": $error-dark,
+  ),
+  $f-colors
+);
+
+/* ----------------------------------------------------
+MERGE ALL COLORS
+Map merge of colors for use with class generating later
+---------------------------------------------------- */
+$all-colors: ();
+$all-colors: map-merge($b-colors, $u-colors);
+$all-colors: map-merge($all-colors, $f-colors);

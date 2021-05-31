@@ -1,0 +1,20 @@
+/* ----------------------------------------------------
+INPUT PLACEHOLDER TEXT
+1) Override Firefox's unusual default opacity
+---------------------------------------------------- */
+::-webkit-input-placeholder {
+	color: $form-placeholder;
+}
+
+::-moz-placeholder {
+	color: $form-placeholder;
+}
+
+:-ms-input-placeholder {
+	color: $form-placeholder;
+}
+
+::placeholder {
+	color: $form-placeholder;
+	opacity: 1; /* 1 */
+}

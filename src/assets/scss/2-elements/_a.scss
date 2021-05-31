@@ -1,0 +1,97 @@
+/* ----------------------------------------------------
+SETTINGS
+---------------------------------------------------- */
+$link-text:                             $ice-xdark;
+$link-text-decoration:                  underline;
+$link-text-focus:                       $link-text;
+$link-text-focus-decoration:            underline;
+$link-text-hover:                       $ice-xxdark;
+$link-text-hover-decoration:            underline;
+
+$link-dark-text:                        $white;
+$link-dark-text-decoration:             underline;
+$link-dark-text-focus:                  $link-dark-text;
+$link-dark-text-focus-decoration:       underline;
+$link-dark-text-hover:                  $cloud-xlight;
+$link-dark-text-hover-decoration:       underline;
+
+$link-disabled-text:                    $muted;
+$link-disabled-text-decoration:         none;
+$link-disabled-text-focus:              $link-disabled-text;
+$link-disabled-text-focus-decoration:   none;
+$link-disabled-text-hover:              $link-disabled-text;
+$link-disabled-text-hover-decoration:   none;
+
+/* ----------------------------------------------------
+MIXINS
+---------------------------------------------------- */
+@mixin createLinkStyle($text, $text-decoration, $text-focus, $text-focus-decoration, $text-hover, $text-hover-decoration, $isDark: false) {
+    color: $text;
+	text-decoration: $text-decoration; 
+
+	&:link,
+	&:visited {
+		color: $text;
+		text-decoration: $text-decoration;
+	}
+
+	&:focus,
+	&:active {
+		color: $text-focus;
+        text-decoration: $text-focus-decoration;
+        
+        @if $isDark == true {
+            @include focusStateDark();
+        } @else {
+            @include focusState();
+        }
+		
+	}
+
+	&:hover {
+		color: $text-hover;
+		text-decoration: $text-hover-decoration;
+	}
+}
+
+/* ----------------------------------------------------
+LINK STYLES
+---------------------------------------------------- */
+a {
+    // Default
+	@include createLinkStyle(
+        $link-text, 
+        $link-text-decoration, 
+        $link-text-focus, 
+        $link-text-focus-decoration, 
+        $link-text-hover, 
+        $link-text-hover-decoration
+    );
+    
+    // For dark backgrounds
+	&.link-dark {
+		@include createLinkStyle(
+            $link-dark-text, 
+            $link-dark-text-decoration, 
+            $link-dark-text-focus, 
+            $link-dark-text-focus-decoration, 
+            $link-dark-text-hover, 
+            $link-dark-text-hover-decoration,
+            true
+        );
+	}
+
+	// Disabled
+	&.link-disabled {
+        @include createLinkStyle(
+            $link-disabled-text, 
+            $link-disabled-text-decoration, 
+            $link-disabled-text-focus, 
+            $link-disabled-text-focus-decoration, 
+            $link-disabled-text-hover, 
+            $link-disabled-text-hover-decoration
+        );
+
+		cursor: not-allowed;
+    }
+}

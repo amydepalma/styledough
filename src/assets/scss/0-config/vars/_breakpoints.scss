@@ -1,0 +1,48 @@
+/* ----------------------------------------------------
+MIN- & MAX- WIDTHS FOR BREAKPOINTS
+---------------------------------------------------- */
+$min-width-xs:  0;
+$min-width-sm:  576px;
+$min-width-md:  768px;
+$min-width-lg:  992px;
+$min-width-xl:  1200px;
+$min-width-xxl: 1400px;
+
+$max-width-xs:  #{$min-width-sm - 1};
+$max-width-sm:  #{$min-width-md - 1};
+$max-width-md:  #{$min-width-lg - 1};
+$max-width-lg:  #{$min-width-xl - 1};
+$max-width-xl:  #{$min-width-xxl - 1};
+$max-width-xxl:  1600px;
+
+$grid-breakpoints: (
+  xs: $min-width-xs,
+  sm: $min-width-sm,
+  md: $min-width-md,
+  lg: $min-width-lg,
+  xl: $min-width-xl,
+  xxl: $min-width-xxl
+) !default;
+
+/* ----------------------------------------------------
+MEDIA QUERIES
+---------------------------------------------------- */
+$xs-only:    "max-width: #{$max-width-xs}";
+
+$sm-up:      "min-width: #{$min-width-sm}";
+$sm-only:    "min-width: #{$min-width-sm}) and (max-width: #{$max-width-sm}";
+$sm-down:    "max-width: #{$max-width-sm}";
+
+$md-up:      "min-width: #{$min-width-md}";
+$md-only:    "min-width: #{$min-width-md}) and (max-width: #{$max-width-md}";
+$md-down:    "max-width: #{$max-width-md}";
+
+$lg-up:      "min-width: #{$min-width-lg}";
+$lg-only:    "min-width: #{$min-width-lg}) and (max-width: #{$max-width-lg}";
+$lg-down:    "max-width: #{$max-width-lg}";
+
+$xl-up:      "min-width: #{$min-width-xl}";
+$xl-only:    "min-width: #{$min-width-xl}) and (max-width: #{$max-width-xl}";
+$xl-down:    "max-width: #{$max-width-xl}";
+
+$xxl-only:    "min-width: #{$min-width-xxl}";

@@ -1,0 +1,7 @@
+/* ----------------------------------------------------
+STRIP UNIT
+https://css-tricks.com/snippets/sass/strip-unit-function/
+---------------------------------------------------- */
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}

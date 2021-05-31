@@ -1,0 +1,52 @@
+/* ----------------------------------------------------
+FA ICONS IN PSEUDO ELEMENTS
+- These mixins only covers the Free icons: Solid and Brands
+- We set Pseudo-elements’ display to none since SVG with 
+Javascript will find each pseudo icon reference and 
+insert an icon into your page’s DOM automatically, so 
+we’ll need to hide the real CSS-created pseudo-element 
+that’s rendered.
+
+https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements#with-svg-js
+---------------------------------------------------- */
+
+/* ----------------------------------------------------
+INSERT FA ICON AS AN INLINE PESUDO ELEMENT
+---------------------------------------------------- */
+@mixin inlinePseudoFA($position, $style, $icon, $icon-width: null, $icon-color: inherit, $spacing-from-icon: .25em) {
+	@if $position == 'before' or
+		$position == 'Before' or
+		$position == 'after' or
+		$position == 'After'
+	{
+		&:#{$position} {
+			display: none; /* 1 */
+			@if $style == 'brands' or $style == 'Brands' {
+                font-family: 'Font Awesome 5 Brands';
+                font-weight: 400;
+			} @else {
+                font-family: 'Font Awesome 5 Solid';
+                font-weight: 900;
+            }
+			content: '#{$icon}';
+        }
+
+        // Add margin-left or -right to the generated SVG 
+        svg[data-fa-pseudo-element] {
+            width: $icon-width;
+            height: $icon-width;
+            color: $icon-color;
+            @if $position == 'before' or $position == 'Before' 
+            {  
+                margin-right: $spacing-from-icon;
+            } 
+            @else if $position == 'after' or $position == 'After'
+            {
+                margin-left: $spacing-from-icon;
+            }
+        }
+        
+	} @else {
+		@warn "`#{$position}` is not a valid pseudo-element.";
+	}
+}

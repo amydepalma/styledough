@@ -1,0 +1,30 @@
+/* ----------------------------------------------------
+FONT FAMLIES
+---------------------------------------------------- */
+$sans: sans-serif;
+$serif: serif;
+
+$body: $sans;
+
+$font-families: ();
+$font-families: map-merge(
+  (
+    "sans": $sans,
+    "serif": $serif
+  ),
+  $font-families
+);
+
+/* ----------------------------------------------------
+FONT SIZES
+---------------------------------------------------- */
+$font-size-base:        16px;
+$font-size-sm:          $font-size-base - 2;
+
+/* ----------------------------------------------------
+FONT SIZES
+May change based on font family used
+---------------------------------------------------- */
+$font-weight-normal:    400;
+$font-weight-semibold:  600;
+$font-weight-bold:      700;

@@ -1,0 +1,74 @@
+/* ----------------------------------------------------
+SETTINGS
+By using these classes, we can be more consistent
+in our spacing across the site
+---------------------------------------------------- */
+@mixin spacingHelperDbl($prop, $position) {
+	#{$prop}-#{$position}: $spacing-default/2 !important;
+
+	@media ($bp-md-up) {
+		#{$prop}-#{$position}: $spacing-default/1.75 !important;
+	}
+
+	@media ($bp-lg-up) {
+		#{$prop}-#{$position}: $spacing-default !important;
+	}
+}
+
+@mixin spacingHelper($prop, $position) {
+	#{$prop}-#{$position}: $spacing-default/2 !important;
+
+	@media ($bp-md-up) {
+		#{$prop}-#{$position}: $spacing-default/1.75 !important;
+	}
+
+	@media ($bp-lg-up) {
+		#{$prop}-#{$position}: $spacing-default !important;
+	}
+}
+
+@mixin spacingHelperHalf($prop, $position) {
+	#{$prop}-#{$position}: $spacing-default/4 !important;
+
+	@media ($bp-md-up) {
+		#{$prop}-#{$position}: $spacing-default/2 !important;
+	}
+}
+
+@mixin spacingHelperQtr($prop, $position) {
+	#{$prop}-#{$position}: $spacing-default/4 !important;
+}
+
+/* ----------------------------------------------------
+RESPONSIVE SPACING
+- Spacing utility classes are repsonsive based on breakpoints
+and use the $spacing var
+- Left/right are not included they were never used
+---------------------------------------------------- */
+.mt { @include spacingHelper(margin, top); }
+.mb { @include spacingHelper(margin, bottom); }
+
+.mt-half { @include spacingHelperHalf(margin, top); }
+.mb-half { @include spacingHelperHalf(margin, bottom); }
+
+.mt-qtr { @include spacingHelperQtr(margin, top); }
+.mb-qtr { @include spacingHelperQtr(margin, bottom); }
+
+/* ----------------------------------------------------
+SET SPACING
+---------------------------------------------------- */
+.mt {
+    &-0 {
+        margin-top: 0;
+    }
+
+    &-10 {
+        margin-top: 10px;
+    }
+}
+
+.mb {
+    &-0 {
+        margin-bottom: 0;
+    }
+}

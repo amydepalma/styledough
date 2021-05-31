@@ -1,0 +1,20 @@
+/* ----------------------------------------------------
+SCREEN-READY ONLY TEXT
+Hide from screen but not screen readers 
+and still allow keyboards to focus
+1) Fix for https://github.com/twbs/bootstrap/issues/25686
+---------------------------------------------------- */
+@mixin srOnly () {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important; /* 1 */ 
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+

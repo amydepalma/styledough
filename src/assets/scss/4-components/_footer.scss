@@ -1,0 +1,17 @@
+.footer {
+    height: $ftr-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $spacing-base*2;
+    background-color: $cloud-xdark;
+    text-align: right;
+    color: $white;
+    font-weight: $font-weight-bold;
+    position: relative;
+	z-index: 5;
+	
+	a {
+		color: $white;
+	}
+}

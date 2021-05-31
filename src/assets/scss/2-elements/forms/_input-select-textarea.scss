@@ -1,0 +1,84 @@
+/* ----------------------------------------------------
+INPUTS, SELECT, TEXTAREA
+1) Remove default browser styling
+2) Font-size must be at least 16px to keep iPhones from zooming
+3) iOS fix for unreadable disabled content
+---------------------------------------------------- */
+input:not([type='checkbox']):not([type='radio']):not([type='range']),
+select,
+textarea {
+	-webkit-appearance: none; /* 1 */
+	box-shadow: none; /* 1 */
+	border-radius: 0; /* 1 */
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	font-family: inherit;
+	font-size: $font-size-base; /* 2 */
+	line-height: normal;
+	color: $form;
+    margin: 0;
+}
+
+// Inputs except radio, checkboxes, and range sliders
+input:not([type='checkbox']):not([type='radio']):not([type='range']),
+select,
+textarea {
+	padding: $spacing-base;
+	border: 1px solid $form-border;
+	background-color: $white;
+    border-radius: $border-radius;
+    
+	&:focus,
+	&:active {
+		@include focusState();
+	}
+
+	&:disabled,
+	&[readonly] {
+		color: $form-disabled;
+		background-color: $form-disabled-bg;
+        opacity: 1; /* 3 */
+        pointer-events: none;
+		cursor: not-allowed;
+    }
+}
+
+/* ----------------------------------------------------
+TEXTAREA-SPECIFIC STYLING
+---------------------------------------------------- */
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+/* ----------------------------------------------------
+SELECT-SPECIFIC STYLING
+---------------------------------------------------- */
+select {
+	// Add in a new arrow bc we removed it with -webkit-appearance: none; in the base form styling
+	background-image: url("../media/icons/icon-arrow-down.svg");
+	background-position: calc(100% - .8em) 50%;
+	background-repeat: no-repeat;
+	background-size: .8em;
+	background-clip: padding-box;
+    
+	// Override the default white text on green background on focus as it looks wonky (and covers the select arrow if custom)
+	&:focus::-ms-value {
+		color: $form-focus;
+		background-color: $trans;
+	}
+
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+		background-color: $trans;
+		border: 0;
+		visibility: hidden;
+	}
+
+	// Muiple select style
+	&[multiple] {
+		height: auto;
+		overflow: hidden;
+	}
+}

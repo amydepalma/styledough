@@ -1,0 +1,26 @@
+/* ----------------------------------------------------
+BACKGROUND COLOR UTILITY CLASSES
+---------------------------------------------------- */
+@each $name, $var in $all-colors {
+  .bkg-#{$name} {
+      background-color: $var;
+  }
+}
+
+/* ----------------------------------------------------
+BORDER COLOR UTILITY CLASSES
+---------------------------------------------------- */
+@each $name, $var in $all-colors {
+  .border-#{$name} {
+      border-color: $var;
+  }
+}
+
+/* ----------------------------------------------------
+TEXT COLOR UTILITY CLASSES
+---------------------------------------------------- */
+@each $name, $var in $all-colors {
+  .text-#{$name} {
+      color: $var;
+  }
+}

@@ -1,0 +1,11 @@
+/* ----------------------------------------------------
+CLEARFIX
+Adds clearfix to the :after on the applied element
+---------------------------------------------------- */
+@mixin clearfix() {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}

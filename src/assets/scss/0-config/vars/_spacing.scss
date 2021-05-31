@@ -1,0 +1,9 @@
+/* ----------------------------------------------------
+SPACING
+1) Used as our increment throughout the site
+2) Used as the default spacing for the utility classes
+3) Used for spacing within the typography flow
+---------------------------------------------------- */
+$spacing-base:              1rem; /* 1 */
+$spacing-default:           $spacing-base * 5; /* 2 */
+$spacing-type-flow:         $spacing-base * 2; /* 3 */

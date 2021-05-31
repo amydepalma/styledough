@@ -1,0 +1,30 @@
+/* ----------------------------------------------------
+DISPLAY
+---------------------------------------------------- */
+@media ($bp-xs-only) {
+    .xs-down-none { 
+        display: none;
+    }
+}
+
+@media ($bp-sm-down) {
+    .sm-down-none {
+        display: none;
+    }
+}
+
+@media ($bp-sm-up) {
+    .sm-up-none {
+        display: none;
+    }
+}
+
+@media ($bp-md-up) {
+    .md-up-none {
+        display: none;
+    }
+}
+
+.d-none {
+    display: none;
+}

@@ -1,0 +1,58 @@
+/* ----------------------------------------------------
+CUSTOM SCROLLBARS
+---------------------------------------------------- */
+// Settings
+$track-color:           $trans;
+$thumb-color:           $cloud-xlight;
+$thumb-border-color:    $cloud-xlight;
+
+@mixin sharedScrollbarStyles() {
+	&::-webkit-scrollbar-track {
+		padding: $spacing-base;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border-left: none;
+		background-color: $track-color;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $thumb-color;
+		outline: none;
+		border-top: 1px solid $thumb-border-color;
+		border-bottom: 1px solid $thumb-border-color;
+	}
+
+	// Firefox
+	scrollbar-color: $thumb-color $track-color;
+	scrollbar-width: thin;
+
+	// IE
+	scrollbar-base-color: $thumb-color;
+	scrollbar-face-color: $thumb-color;
+	scrollbar-track-color: $track-color;
+	scrollbar-3dlight-color: $thumb-color;
+	scrollbar-highlight-color: $thumb-color;
+	scrollbar-arrow-color: $track-color;
+	scrollbar-shadow-color: $thumb-color;
+	scrollbar-dark-shadow-color: $thumb-color;
+}
+
+// Vertical Scrollbar
+@mixin customScrollbar($borderRadius: 0) {
+	&::-webkit-scrollbar {
+		width: $spacing-base;
+	}
+
+	@include sharedScrollbarStyles();
+}
+
+// Horizontal Scrollbar
+@mixin customScrollbarHorz($borderRadius: 0) {
+	&::-webkit-scrollbar {
+		width: $spacing-base;
+		height: $spacing-base;
+		padding: 0 $spacing-base;
+	}
+
+	@include sharedScrollbarStyles();
+}

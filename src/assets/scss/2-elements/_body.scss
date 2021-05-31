@@ -1,0 +1,21 @@
+/* ----------------------------------------------------
+SETTINGS
+---------------------------------------------------- */
+$body-bkg-color:        $white;
+$body-text-color:       $cloud-xxdark;
+$body-font-family:      $sans;
+$body-line-height:      1.6;
+
+/* ----------------------------------------------------
+STYLES
+---------------------------------------------------- */
+body {
+  font-family: $body-font-family;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  text-align: left;
+  line-height: $body-line-height;
+  background-color: $body-bkg-color;
+  color: $body-text-color;
+  @include selectionBkg();
+}

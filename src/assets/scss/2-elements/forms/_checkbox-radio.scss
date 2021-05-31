@@ -1,0 +1,149 @@
+/* ----------------------------------------------------
+BASE STYLING
+1) Remove default browser styling
+---------------------------------------------------- */
+input[type='checkbox'] {
+	-webkit-appearance: checkbox; // 1
+}
+
+input[type='radio'] {
+	-webkit-appearance: radio; // 1
+}
+
+input[type='checkbox'], 
+input[type='radio'] {
+	width: auto;
+    height: 1em;
+	border-color: $form-border;
+	cursor: pointer;
+	box-sizing: content-box;
+
+	+ span {
+		padding-left: 7px;
+		margin-left: -3px;
+		margin-right: 20px;
+		cursor: pointer;
+	}
+}
+
+/* ----------------------------------------------------
+CUSTOM STYLING
+---------------------------------------------------- */
+.custom-checkbox-label,
+.custom-radio-label {
+    display: inline-block;
+	line-height: 1.8;
+	position: relative;
+	padding-left: 23px;
+	margin-right: 1.25em;
+	margin-left: 3px;
+	cursor: pointer;
+	user-select: none;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-base;
+    color: $body-text-color;
+
+	> input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+        z-index: 1;
+        
+        // Show the indicator (dot/circle/etc) when checked
+		&:checked ~ .custom-checkbox:after,
+		&:checked ~ .custom-radio:after {
+            display: block;
+            
+		}
+
+        &:checked ~ .custom-checkbox {
+            background-color: $white;
+
+            &:after {
+                background-color: $white;
+            }
+        }
+        
+		&:checked ~ .custom-radio {
+            background-color: $white;
+
+            &:after {
+                background-color: $beet;
+            }
+        }
+        
+		&:focus + span {
+			@include focusState();
+		}
+	}
+
+	@media ($hover) {
+		&:hover input ~ .custom-checkbox {
+			background-color: $white;
+            border-color:$beet;
+            
+            &:after {
+                background-color: $white;
+			}
+        }
+		&:hover input ~ .custom-radio {
+			background-color: $white;
+            border-color: $form-border;
+            
+            &:after {
+                background-color: $beet;
+			}
+		}
+	}
+}
+
+.custom-checkbox,
+.custom-radio {
+	position: absolute;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	background-color: $white;
+	border: 1px solid $form-border;
+
+	&:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+}
+
+.custom-checkbox {
+	top: 5px;
+	border-radius: 0;
+
+	// Inner checkmark/indicator
+	&:after {
+		left: 6px;
+		top: 13%;
+		width: 5px;
+		height: 10px;
+		border: solid $beet;
+		border-width: 0 3px 3px 0;
+		transform: rotate(45deg);
+	}
+}
+
+.custom-radio {
+	top: 4px;
+	border-radius: 100%;
+
+	// Inner dot/indicator
+	&:after {
+		content: '';
+		display: block;
+		border-radius: 100%;
+        width: 14px;
+        height: 14px;
+        background-color: $white;
+        left: 1px;
+        top: 1px;
+	}
+}

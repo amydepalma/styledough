@@ -1,0 +1,16 @@
+.header {
+    height: $hdr-height;
+    background-color: $cloud-light;
+    padding: 0 $spacing-base*2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left, &-right {
+        flex: 0 0 auto;
+    }
+
+    &-center {
+        flex: 0 1 $min-width-sm;
+    }
+}

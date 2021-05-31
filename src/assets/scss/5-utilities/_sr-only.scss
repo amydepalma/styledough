@@ -1,0 +1,31 @@
+/* ----------------------------------------------------
+SCREEN-READY ONLY TEXT
+Hide from screen but not screen readers 
+and still allow keyboards to focus
+---------------------------------------------------- */
+.sr-only {
+    @include srOnly();
+
+    // Support for Skip to Content link displaying on first tab press
+    &-focusable {
+        &:active, 
+        &:focus {
+            position: absolute;
+            left: 5px; 
+            top: 5px;
+            width: auto; 
+            height: auto; 
+            overflow: visible; 
+            z-index: 5;
+            padding: 10px;
+            background-color: $black;
+            color: $white;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        &:not(:focus) {
+            @include srOnly();
+        }
+    }
+}

@@ -1,0 +1,15 @@
+/* ----------------------------------------------------
+SELECTION BACKGROUND
+---------------------------------------------------- */
+@mixin selectionBkg($bkg-color: $info, $text-color: $white) {
+	::-moz-selection {
+		background-color: $bkg-color;
+		color: $text-color;
+		cursor: text;
+	}
+	::selection {
+		background-color: $bkg-color;
+		color: $text-color;
+		cursor: text;
+	}
+}

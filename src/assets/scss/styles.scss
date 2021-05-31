@@ -1,0 +1,71 @@
+/* ----------------------------------------------------
+TABLE OF CONTENTS
+---
+0-CONFIG............. Declarations of global functions, mixins, and variables
+1-VENDOR............. Vendor styles
+2-ELEMENTS........... Element styles
+3-PATTERNS........... Repeatable UI objects used throughout the site; can be found within components
+4-COMPONENTS......... Large UI objects comprised of various patterns or super-specific and single-use such as the header
+5-UTILITIES.......... Utility classes
+---------------------------------------------------- */
+
+// 0-CONFIG
+@import './0-config/vars/border-radius';
+@import './0-config/vars/box-shadow';
+@import './0-config/vars/breakpoints';
+@import './0-config/vars/colors';
+@import './0-config/vars/site-settings';
+@import './0-config/vars/spacing';
+@import './0-config/vars/support-queries';
+@import './0-config/vars/type';
+@import './0-config/functions/rem';
+@import './0-config/functions/strip-unit';
+@import './0-config/mixins/clearfix';
+@import './0-config/mixins/focus-state';
+@import './0-config/mixins/font-awesome';
+@import './0-config/mixins/screen-reader-text';
+@import './0-config/mixins/scrollbars';
+@import './0-config/mixins/selection-bkg';
+@import './0-config/mixins/type';
+@import './0-config/reset';
+
+// 1-VENDOR
+@import './1-vendor/bootstrap/bootstrap-grid';
+// @import './1-vendor/magnific-popup/magnific-popup';
+
+// 2-ELEMENTS
+// @import './2-elements/a';
+@import './2-elements/body';
+// @import './2-elements/h';
+// @import './2-elements/hr';
+// @import './2-elements/html';
+// @import './2-elements/p';
+// @import './2-elements/table';
+// @import './2-elements/ul-ol';
+// @import './2-elements/forms/_settings';
+// @import './2-elements/forms/checkbox-radio';
+// @import './2-elements/forms/input-select-textarea';
+// @import './2-elements/forms/label';
+// @import './2-elements/forms/placeholder';
+
+// 3-PATTERNS
+// @import './3-patterns/button';
+// @import './3-patterns/a11y';
+// @import './3-patterns/accordion';
+// @import './3-patterns/modal';
+// @import './3-patterns/responsive-iframe';
+
+// 4-COMPONENTS
+// @import './4-components/footer';
+// @import './4-components/header';
+// @import './4-components/sticky-footer-wrap';
+
+// 5-UTILITIES
+// @import './5-utilities/colors';
+// @import './5-utilities/display';
+// @import './5-utilities/flex';
+// @import './5-utilities/other';
+// @import './5-utilities/spacing';
+// @import './5-utilities/sr-only';
+// @import './5-utilities/typography';
+// @import './5-utilities/visibility';

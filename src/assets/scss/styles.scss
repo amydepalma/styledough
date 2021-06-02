@@ -10,6 +10,8 @@ TABLE OF CONTENTS
 ---------------------------------------------------- */
 
 // 0-CONFIG
+@import './0-config/functions/strip-unit';
+@import './0-config/functions/rem';
 @import './0-config/vars/border-radius';
 @import './0-config/vars/box-shadow';
 @import './0-config/vars/breakpoints';
@@ -18,15 +20,12 @@ TABLE OF CONTENTS
 @import './0-config/vars/spacing';
 @import './0-config/vars/support-queries';
 @import './0-config/vars/type';
-@import './0-config/functions/rem';
-@import './0-config/functions/strip-unit';
 @import './0-config/mixins/clearfix';
 @import './0-config/mixins/focus-state';
 @import './0-config/mixins/font-awesome';
 @import './0-config/mixins/screen-reader-text';
 @import './0-config/mixins/scrollbars';
 @import './0-config/mixins/selection-bkg';
-@import './0-config/mixins/type';
 @import './0-config/reset';
 
 // 1-VENDOR
@@ -37,9 +36,9 @@ TABLE OF CONTENTS
 // @import './2-elements/a';
 @import './2-elements/body';
 @import './2-elements/h';
+@import './2-elements/p';
 // @import './2-elements/hr';
 // @import './2-elements/html';
-// @import './2-elements/p';
 // @import './2-elements/table';
 // @import './2-elements/ul-ol';
 // @import './2-elements/forms/_settings';
@@ -69,3 +68,14 @@ TABLE OF CONTENTS
 // @import './5-utilities/sr-only';
 // @import './5-utilities/typography';
 // @import './5-utilities/visibility';
+
+/* ----------------------------------------------------
+STYLEDOUGH STYLES ONLY
+---------------------------------------------------- */
+.styledough {
+    padding-top: $spacing-base * 3;
+
+    main {
+        max-width: 100ch;
+    }
+}

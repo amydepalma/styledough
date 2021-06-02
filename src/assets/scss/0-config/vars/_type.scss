@@ -18,11 +18,11 @@ $font-families: map-merge(
 /* ----------------------------------------------------
 FONT SIZES
 ---------------------------------------------------- */
-$font-size-base:        16px;
-$font-size-sm:          $font-size-base - 2;
+$font-size-base-px: 16px;
+$font-size-base:  1rem;
 
 /* ----------------------------------------------------
-FONT SIZES
+FONT WEIGHTS
 May change based on font family used
 ---------------------------------------------------- */
 $font-weight-normal:    400;

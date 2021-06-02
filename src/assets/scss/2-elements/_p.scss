@@ -2,13 +2,13 @@
 SETTINGS
 ---------------------------------------------------- */
 $p-size-min:        $font-size-base;
-$p-size-max:        $p-size-min + 2;
+$p-size-max:        $p-size-min * 1.25;
 
-$p-size-sm-min:     $font-size-base - 2;
-$p-size-sm-max:     $p-size-sm-min;
+$p-size-sm-min:     $font-size-base * .8;
+$p-size-sm-max:     $p-size-sm-min * .8;
 
-$p-size-lg-min:     $font-size-base + 2;
-$p-size-lg-max:     $p-size-lg-min + 2;
+$p-size-lg-max:     $font-size-base * 2;
+$p-size-lg-min:     $p-size-lg-max * 1.75;
 
 $p-margin-bottom:   $spacing-type-flow;
 
@@ -16,17 +16,17 @@ $p-margin-bottom:   $spacing-type-flow;
 STYLES
 ---------------------------------------------------- */
 p, .p {
-    @include fluidType($p-size-min, $p-size-max);
+    font-size: clamp($p-size-min, 1.25vw, $p-size-max);
     margin-bottom: $p-margin-bottom;
 }
 
 .p-sm, small {
-    @include fluidType($p-size-sm-min, $p-size-sm-max);
+    font-size: clamp($p-size-sm-min, .5vw, $p-size-sm-max);
     margin-bottom: $p-margin-bottom/2;
     line-height: 1.5;
 }
 
 .p-lg {
-    @include fluidType($p-size-lg-min, $p-size-lg-max);
+    font-size: clamp($p-size-lg-min, 1vw, $p-size-lg-max);
     margin-bottom: $p-margin-bottom;
 }

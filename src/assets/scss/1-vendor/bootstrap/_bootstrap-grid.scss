@@ -24,6 +24,7 @@ This design system utilizes the Bootstrap v5.0.1's grid system but removes every
   padding-left: var(--bs-gutter-x, $spacing-base);
   margin-right: auto;
   margin-left: auto;
+  max-width: $max-width-xxl;
 }
 
 // @media (min-width: $min-width-sm) {
@@ -46,11 +47,11 @@ This design system utilizes the Bootstrap v5.0.1's grid system but removes every
 //     max-width: $max-width-xl;
 //   }
 // }
-@media (min-width: $min-width-xxl) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: $max-width-xxl;
-  }
-}
+// @media (min-width: $min-width-xxl) {
+//   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+//     max-width: $max-width-xxl;
+//   }
+// }
 .row {
   --bs-gutter-x: $spacing-base;
   --bs-gutter-y: 0;

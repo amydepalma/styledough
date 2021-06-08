@@ -5,7 +5,7 @@ https://css-tricks.com/the-focus-visible-trick/
 
 // Base focus, Safari recognizes this and only applies it on keyboard navigation; fallback for browsers that don't support :focus-visible
 :focus {
-	outline: 2px solid $primary;
+	outline: 2px solid $violet-light;
 }
 
 // Mouse focus
@@ -15,5 +15,5 @@ https://css-tricks.com/the-focus-visible-trick/
 
 // Keyboard focus
 :focus-visible {
-	outline: 2px solid $primary;
+	outline: 2px solid $violet-light;
 }

@@ -12,7 +12,7 @@ $link-dark-text:                        $white;
 $link-dark-text-decoration:             underline;
 $link-dark-text-focus:                  $link-dark-text;
 $link-dark-text-focus-decoration:       underline;
-$link-dark-text-hover:                  $cloud-xlight;
+$link-dark-text-hover:                  $black-50;
 $link-dark-text-hover-decoration:       underline;
 
 $link-disabled-text:                    $muted;
@@ -27,7 +27,7 @@ MIXINS
 ---------------------------------------------------- */
 @mixin createLinkStyle($text, $text-decoration, $text-focus, $text-focus-decoration, $text-hover, $text-hover-decoration, $isDark: false) {
     color: $text;
-	text-decoration: $text-decoration; 
+	text-decoration: $text-decoration;
 
 	&:link,
 	&:visited {
@@ -39,13 +39,13 @@ MIXINS
 	&:active {
 		color: $text-focus;
         text-decoration: $text-focus-decoration;
-        
+
         @if $isDark == true {
             @include focusStateDark();
         } @else {
             @include focusState();
         }
-		
+
 	}
 
 	&:hover {
@@ -60,22 +60,22 @@ LINK STYLES
 a {
     // Default
 	@include createLinkStyle(
-        $link-text, 
-        $link-text-decoration, 
-        $link-text-focus, 
-        $link-text-focus-decoration, 
-        $link-text-hover, 
+        $link-text,
+        $link-text-decoration,
+        $link-text-focus,
+        $link-text-focus-decoration,
+        $link-text-hover,
         $link-text-hover-decoration
     );
-    
+
     // For dark backgrounds
 	&.link-dark {
 		@include createLinkStyle(
-            $link-dark-text, 
-            $link-dark-text-decoration, 
-            $link-dark-text-focus, 
-            $link-dark-text-focus-decoration, 
-            $link-dark-text-hover, 
+            $link-dark-text,
+            $link-dark-text-decoration,
+            $link-dark-text-focus,
+            $link-dark-text-focus-decoration,
+            $link-dark-text-hover,
             $link-dark-text-hover-decoration,
             true
         );
@@ -84,11 +84,11 @@ a {
 	// Disabled
 	&.link-disabled {
         @include createLinkStyle(
-            $link-disabled-text, 
-            $link-disabled-text-decoration, 
-            $link-disabled-text-focus, 
-            $link-disabled-text-focus-decoration, 
-            $link-disabled-text-hover, 
+            $link-disabled-text,
+            $link-disabled-text-decoration,
+            $link-disabled-text-focus,
+            $link-disabled-text-focus-decoration,
+            $link-disabled-text-hover,
             $link-disabled-text-hover-decoration
         );
 

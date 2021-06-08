@@ -3,5 +3,5 @@ PX to REM
 font-size: rem(24);
 ---------------------------------------------------- */
 @function rem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($font-size-base-px)}rem;
+    @return #{strip-unit($pxValue) / strip-unit($font-size-base-px)}rem;
 }

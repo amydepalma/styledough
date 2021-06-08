@@ -1,7 +1,7 @@
 /* ----------------------------------------------------
 SETTINGS
 ---------------------------------------------------- */
-$form:                $cloud-xxdark;
+$form:                $black-80;
 $form-bg:             $white;
 $form-border:         $cloud-light;
 $form-border-focus:   $cloud-xdark;
@@ -10,4 +10,4 @@ $form-info:           $cloud-dark;
 $form-placeholder:    $cloud;
 $form-focus:          $cloud-xdark;
 $form-disabled:       $cloud-dark;
-$form-disabled-bg:    lighten($cloud-xlight, 7%);
+$form-disabled-bg:    lighten($black-50, 7%);

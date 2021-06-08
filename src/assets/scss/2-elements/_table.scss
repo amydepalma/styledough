@@ -9,7 +9,7 @@ $table-font-size:           null;
 $table-font-size-sm:        14px;
 
 $table-text:                lighten($body-text-color, 15%);
-$table-bkg:                 rgba($cloud-xlight, .25);
+$table-bkg:                 rgba($black-50, .25);
 $table-accent-bkg:          $white;
 
 $table-hover:               false;
@@ -54,7 +54,7 @@ table {
         + tbody {
             border-top: ($table-border-width*2) solid $table-border-color;
         }
-    
+
         tr, th {
             font-weight: $font-weight-normal;
 
@@ -79,7 +79,7 @@ table {
     }
 }
 
-// Wrap the <table> in <div class="table-responsive"> 
+// Wrap the <table> in <div class="table-responsive">
 // to create a responsive table
 .table-responsive {
     @include customScrollbarHorz();

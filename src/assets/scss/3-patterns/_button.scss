@@ -19,12 +19,12 @@ $btn-padding-lg:            $spacing-base*1.5 $spacing-base*2.5;
 LIST BASE STYLES
 ---------------------------------------------------- */
 // Default Style
-$btn-text:                $cloud-xxdark;
-$btn-bkg:                 $cloud-xlight;
+$btn-text:                $black-80;
+$btn-bkg:                 $black-50;
 $btn-bkg-hover:           darken($btn-bkg, 19.5%);
 $btn-disabled:            $muted;
 $btn-disabled-bkg:        #F3F5F6;
-$btn-disabled-border:     $cloud-xlight;
+$btn-disabled-border:     $black-50;
 
 // Primary Style
 $btn-p-text:              $white;
@@ -123,8 +123,8 @@ BUTTON BASE STYLES
     text-decoration: none !important;
 
     @include createButton(
-        $btn-text, 
-        $btn-bkg, 
+        $btn-text,
+        $btn-bkg,
         $btn-bkg-hover,
         $btn-disabled,
         $btn-disabled-bkg,
@@ -144,22 +144,22 @@ STYLES
 .btn {
     &.btn-primary {
         @include createButton(
-            $btn-p-text, 
-            $btn-p-bkg, 
+            $btn-p-text,
+            $btn-p-bkg,
             $btn-p-bkg-hover,
-            $btn-p-disabled, 
-            $btn-p-disabled-bkg, 
+            $btn-p-disabled,
+            $btn-p-disabled-bkg,
             $btn-p-disabled-border
         );
     }
 
     &.btn-secondary {
         @include createButton(
-            $btn-s-text, 
-            $btn-s-bkg, 
+            $btn-s-text,
+            $btn-s-bkg,
             $btn-s-bkg-hover,
-            $btn-s-disabled, 
-            $btn-s-disabled-bkg, 
+            $btn-s-disabled,
+            $btn-s-disabled-bkg,
             $btn-s-disabled-border
         );
     }
@@ -202,7 +202,7 @@ VARIANTS
     &.btn-link {
         border: none;
         text-transform: none;
-        padding: 0; 
+        padding: 0;
         color: $ice-xdark;
         background-color: $trans;
         text-decoration: underline !important;

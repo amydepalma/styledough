@@ -30,6 +30,10 @@ $cloud-dark:      #737B80;
 $cloud-xdark:     #505659;
 $cloud-xxdark:    #2b3033;
 
+$white:   #FFFFFF;
+$black:   #000000;
+$trans:   rgba(255, 255, 255, 0);
+
 $b-colors: ();
 $b-colors: map-merge(
   (
@@ -63,23 +67,8 @@ $b-colors: map-merge(
 /* ----------------------------------------------------
 UTILITY
 ---------------------------------------------------- */
-$white:   #FFFFFF;
-$black:   #000000;
-$trans:   rgba(255, 255, 255, 0);
+$primary: $cherry;
 
-$u-colors: ();
-$u-colors: map-merge(
-  (
-    "white": $white,
-    "black": $black,
-    "trans": $trans,
-  ),
-  $u-colors
-);
-
-/* ----------------------------------------------------
-FEEDBACK
----------------------------------------------------- */
 $muted:           #BEBEBE;
 $muted-light:     $cloud-light;
 $muted-dark:      $cloud-dark;
@@ -121,6 +110,16 @@ $f-colors: map-merge(
   ),
   $f-colors
 );
+$u-colors: ();
+$u-colors: map-merge(
+  (
+    "white": $white,
+    "black": $black,
+    "trans": $trans,
+  ),
+  $u-colors
+);
+
 
 /* ----------------------------------------------------
 MERGE ALL COLORS

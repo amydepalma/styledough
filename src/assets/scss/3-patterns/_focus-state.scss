@@ -1,0 +1,19 @@
+/* ----------------------------------------------------
+FOCUS STATES
+https://css-tricks.com/the-focus-visible-trick/
+---------------------------------------------------- */
+
+// Base focus, Safari recognizes this and only applies it on keyboard navigation; fallback for browsers that don't support :focus-visible
+:focus {
+	outline: 2px solid $primary;
+}
+
+// Mouse focus
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+// Keyboard focus
+:focus-visible {
+	outline: 2px solid $primary;
+}

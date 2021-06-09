@@ -3,8 +3,8 @@ CUSTOM SCROLLBARS
 ---------------------------------------------------- */
 // Settings
 $track-color:           $trans;
-$thumb-color:           $black-50;
-$thumb-border-color:    $black-50;
+$thumb-color:           $gray-50;
+$thumb-border-color:    $gray-50;
 
 @mixin sharedScrollbarStyles() {
 	&::-webkit-scrollbar-track {

@@ -1,0 +1,20 @@
+{% macro colorSwatch(colorName, colorBase, colorShades, colorNotes) %}
+	<div class="sd-swatch-wrapper">
+
+		<div class="sd-swatch-color" style="background-color: {{ colorBase }};">
+		</div>
+		<div class="sd-swatch-color" style="background-color: {{ colorShades.light }};">
+		</div>
+		<div class="sd-swatch-color" style="background-color: {{ colorShades.dark }};">
+		</div>
+
+		<h2 class="sd-swatch-name">
+			{{ colorName }}
+		</h2>
+
+		{# <div class="sd-swatch-notes">
+			{{ colorNotes }}
+		</div> #}
+
+	</div>
+{% endmacro %}

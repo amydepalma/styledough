@@ -1,49 +1,52 @@
 /* ----------------------------------------------------
 BRAND
+https://mdigi.tools/color-shades/
 ---------------------------------------------------- */
 $violet: #540d6e;
-$violet-light: lighten($violet, 5%);
-$violet-dark: darken($violet, 5%);
+$violet-light: #d78df2;
+$violet-dark: #3a094c;
 
 $pink: #ee4266;
-$pink-light: lighten($pink, 5%);
-$pink-dark: darken($pink, 5%);
+$pink-light: #f48aa0;
+$pink-dark: #750b21;
 
 $yellow: #ffd23f;
-$yellow-light: lighten($yellow, 5%);
-$yellow-dark: darken($yellow, 5%);
+$yellow-light: #ffe180;
+$yellow-dark: #806200;
 
 $teal: #3bceac;
-$teal-light: lighten($teal, 5%);
-$teal-dark: darken($teal, 5%);
+$teal-light: #3bceac;
+$teal-dark: #196654;
 
 $green: #0ead69;
-$green-light: lighten($green, 5%);
-$green-dark: darken($green, 5%);
+$green-light: #89f5c7;
+$green-dark: #0a7648;
 
 /* ----------------------------------------------------
 GRAYS
+The scale goes from light to dark
+(i.e. black-90 is 90% $black, black-30 is 30% $black)
 ---------------------------------------------------- */
-$black: #111827;
-$black-90: lighten($black, 10%);
-$black-80: lighten($black, 20%);
-$black-70: lighten($black, 30%);
-$black-60: lighten($black, 40%);
-$black-50: lighten($black, 50%);
-$black-40: lighten($black, 60%);
-$black-30: lighten($black, 70%);
-$black-20: lighten($black, 80%);
-$black-10: lighten($black, 90%);
 $white: #ffffff;
+$gray-10: #e8e8e8;
+$gray-20: #d1d1d1;
+$gray-30: #bababa;
+$gray-40: #a3a3a3;
+$gray-50: #8d8d8d;
+$gray-60: #767676;
+$gray-70: #5f5f5f;
+$gray-80: #484848;
+$gray-90: #313131;
+$black: #1a1a1a;
 
 $trans: rgba(255, 255, 255, 0);
 
 /* ----------------------------------------------------
 UTILITY
 ---------------------------------------------------- */
-$muted: $black-50;
-$muted-light: $black-40;
-$muted-dark: $black-60;
+$muted: $gray-50;
+$muted-light: $gray-40;
+$muted-dark: $gray-60;
 
 $info: $teal;
 $info-light: $teal-light;

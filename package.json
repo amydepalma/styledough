@@ -2,10 +2,10 @@
  "name": "Styledough",
  "version": "1.0.0",
  "description": "Set of HTML and SASS starter files to aid in building base level CSS stylings for a web project.",
- "main": "src/index.html",
+ "main": "src/index.njk",
  "scripts": {
-  "start": "parcel src/index.html -p 3000 --open",
-  "build:parcel": "parcel build src/index.html",
+  "start": "parcel src/index.njk -p 3000 --open",
+  "build:parcel": "parcel build src/index.njk",
   "build": "npm run clean && npm run build:parcel",
   "clean": "rm -rf dist/*"
  },
@@ -32,8 +32,10 @@
   "@babel/core": "^7.14.3",
   "@babel/preset-env": "^7.14.4",
   "node-sass": "^4.14.1",
+  "nunjucks": "^3.2.3",
   "parcel-bundler": "^1.12.5",
   "parcel-plugin-imagemin": "^3.0.0",
+  "parcel-plugin-nunjucks": "^2.2.2",
   "parcel-plugin-svg-sprite": "^1.4.1"
  }
 }

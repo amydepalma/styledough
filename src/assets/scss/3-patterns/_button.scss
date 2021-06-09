@@ -20,11 +20,11 @@ LIST BASE STYLES
 ---------------------------------------------------- */
 // Default Style
 $btn-text:                $black-80;
-$btn-bkg:                 $black-50;
+$btn-bkg:                 $gray-50;
 $btn-bkg-hover:           darken($btn-bkg, 19.5%);
 $btn-disabled:            $muted;
 $btn-disabled-bkg:        #F3F5F6;
-$btn-disabled-border:     $black-50;
+$btn-disabled-border:     $gray-50;
 
 // Primary Style
 $btn-p-text:              $white;

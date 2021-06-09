@@ -23,11 +23,13 @@ STYLES ONLY USED IN STYLEDOUGH; DELETE ME LATER
 STYLEDOUGH STYLES ONLY
 ---------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-$sd-font: 'Satisfy', cursive;
-$pink: #A9177A;
-$brown-light: #F6EBC1;
-$brown-med: #AAA187;
+$sd-font-heading: 'Satisfy', cursive;
+$sd-font-body: 'Arial', sans-serif;
+$pink: #a9177a;
+$brown-light: #f6ebc1;
+$brown-med: #aaa187;
 
+// Base structure
 body.styledough {
 	@media ($md-up) {
 		display: grid;
@@ -36,7 +38,7 @@ body.styledough {
 	}
 
 	.sd-title {
-		font-family: $sd-font;
+		font-family: $sd-font-heading;
 		font-size: rem(18);
 	}
 
@@ -61,7 +63,6 @@ body.styledough {
 		}
 	}
 
-
 	main {
 		padding: 2rem 1.5rem;
 
@@ -79,11 +80,52 @@ body.styledough {
 
 		.sd-section-heading {
 			display: inline-block;
-			font-family: $sd-font;
-			font-size: rem(42);
+			font-family: $sd-font-heading;
+			font-size: rem(48);
+			font-style: normal;
 			color: $pink;
-			padding: rem(8);
 			margin-bottom: rem(30);
 		}
+
+		.sd-section-subheading {
+			font-family: $sd-font-body;
+			font-size: rem(30);
+			font-weight: normal;
+			text-transform: none;
+		}
 	}
+}
+
+// Color swatches
+.sd-swatch {
+	&-grid {
+		display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  	grid-gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	&-wrapper {
+		border: 1px solid rgba(0,0,0,.15);
+		padding: .5rem;
+	}
+
+	&-color {
+		height: 2rem;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	&-name {
+		font-family: $sd-font-body;
+		font-size: 1rem;
+		font-weight: bold;
+		font-style: normal;
+		margin: 0 0 .25rem 0;
+	}
+
+	// &-notes {
+	// 	font-family: $sd-font-body;
+	// 	font-size: 0.9rem;
+	// }
 }

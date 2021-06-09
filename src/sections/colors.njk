@@ -1,0 +1,97 @@
+<section id="colors">
+	<h2 class="sd-section-heading">Colors</h2>
+	{% import "../patterns/color-swatch.njk" as siteColors %}
+	{% set brandColors = [
+			{
+				"color_name"  : "Violet",
+				"color_base" : "#540d6e",
+				"color_shades" : {
+					"light": "#d78df2",
+					"dark": "#3a094c"
+				},
+				"color_notes" : ""
+			}
+		]
+	%}
+
+	{% set utilityColors = [
+			{
+				"color_name"  : "brandColor",
+				"color_value" : "#f06d06",
+				"color_notes" : ""
+
+			},
+			{
+				"color_name"  : "brandHighlight",
+				"color_value" : "#d0b000",
+				"color_notes" : ""
+			},
+			{
+				"color_name"  : "grayDark",
+				"color_value" : "#333333",
+				"color_notes" : ""
+			}
+		]
+	%}
+
+	{% set grayColors = [
+			{
+				"color_name"  : "brandColor",
+				"color_value" : "#f06d06",
+				"color_notes" : ""
+
+			},
+			{
+				"color_name"  : "brandHighlight",
+				"color_value" : "#d0b000",
+				"color_notes" : ""
+			},
+			{
+				"color_name"  : "grayDark",
+				"color_value" : "#333333",
+				"color_notes" : ""
+			}
+		]
+	%}
+
+
+	<h3 class="sd-section-subheading">Brand</h3>
+	<div class="sd-swatch-grid">
+		{% for color in brandColors %}
+			{{
+				siteColors.colorSwatch(
+					color.color_name,
+					color.color_base,
+					color.color_shades,
+					color.color_notes
+				)
+			}}
+		{% endfor %}
+	</div>
+
+	<h3 class="sd-section-subheading">Grays</h3>
+	<div class="sd-swatch-grid">
+		{% for color in grayColors %}
+			{{
+				siteColors.colorSwatch(
+					color.color_name,
+					color.color_value,
+					color.color_notes
+				)
+			}}
+		{% endfor %}
+	</div>
+
+	<h3 class="sd-section-subheading">Utility</h3>
+	<div class="sd-swatch-grid">
+		{% for color in utilityColors %}
+			{{
+				siteColors.colorSwatch(
+					color.color_name,
+					color.color_value,
+					color.color_notes
+				)
+			}}
+		{% endfor %}
+	</div>
+</section>

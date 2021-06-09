@@ -1,13 +1,6 @@
-{% extends 'layout.njk' %}
+{% extends 'layouts/base.njk' %}
 
 {% block main %}
-<section id="colors">
-	<h2 class="sd-section-heading">Colors</h2>
-	{% include "includes/sections/colors.njk" %}
-</section>
-
-<section id="typography">
-	<h2 class="sd-section-heading">Typography</h2>
-	{% include "includes/sections/typography.html" %}
-</section>
+	{% include "sections/colors.njk" %}
+	{% include "sections/typography.html" %}
 {% endblock %}

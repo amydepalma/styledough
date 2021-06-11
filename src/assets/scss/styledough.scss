@@ -98,34 +98,28 @@ body.styledough {
 
 // Color swatches
 .sd-swatch {
-	&-grid {
-		display: grid;
-  	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  	grid-gap: 2rem;
-		margin-bottom: 2rem;
-	}
-
-	&-wrapper {
-		border: 1px solid rgba(0,0,0,.15);
-		padding: .5rem;
-	}
-
-	&-color {
-		height: 2rem;
-		width: 100%;
-		margin-bottom: 1rem;
-	}
-
 	&-name {
 		font-family: $sd-font-body;
 		font-size: 1rem;
 		font-weight: bold;
 		font-style: normal;
-		margin: 0 0 .25rem 0;
+		margin: 0 0 .75rem 0;
 	}
 
-	// &-notes {
-	// 	font-family: $sd-font-body;
-	// 	font-size: 0.9rem;
-	// }
+	&-grid {
+		display: grid;
+  	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  	grid-gap: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	&-tile > div {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		justify-content: center;
+		height: 4rem;
+		padding: 0 .5rem;
+		border-radius: .5rem;
+	}
 }

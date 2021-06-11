@@ -1,20 +1,20 @@
 {% macro colorSwatch(colorName, colorBase, colorShades, colorNotes) %}
-	<div class="sd-swatch-wrapper">
-
-		<div class="sd-swatch-color" style="background-color: {{ colorBase }};">
+	<h2 class="sd-swatch-name">{{ colorName }}</h2>
+	<div class="sd-swatch-grid">
+		<div class="sd-swatch-tile">
+			<div style="background-color: {{ colorBase.hex }};{% if colorBase.textColor %}color: {{ colorBase.textColor }}{% endif %};">
+				<span>{{ colorBase.hex }}</span>
+				<span>{{ colorBase.var }}</span>
+			</div>
 		</div>
-		<div class="sd-swatch-color" style="background-color: {{ colorShades.light }};">
-		</div>
-		<div class="sd-swatch-color" style="background-color: {{ colorShades.dark }};">
-		</div>
 
-		<h2 class="sd-swatch-name">
-			{{ colorName }}
-		</h2>
-
-		{# <div class="sd-swatch-notes">
-			{{ colorNotes }}
-		</div> #}
-
+		{% for color in colorShades %}
+			<div class="sd-swatch-tile">
+				<div style="background-color: {{ color.hex }};{% if color.textColor %}color: {{ color.textColor }}{% endif %};">
+					<span>{{ color.hex }}</span>
+					<span>{{ color.var }}</span>
+				</div>
+			</div>
+		{% endfor %}
 	</div>
 {% endmacro %}

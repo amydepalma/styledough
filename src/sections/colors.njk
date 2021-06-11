@@ -1,62 +1,140 @@
+{% import "../patterns/color-swatch.njk" as siteColors %}
+
 <section id="colors">
 	<h2 class="sd-section-heading">Colors</h2>
-	{% import "../patterns/color-swatch.njk" as siteColors %}
 	{% set brandColors = [
-			{
-				"color_name"  : "Violet",
-				"color_base" : "#540d6e",
-				"color_shades" : {
-					"light": "#d78df2",
-					"dark": "#3a094c"
+		{
+			"color_name": "Violet",
+			"color_base": {
+				"var": "$violet",
+				"hex": "#540d6e",
+				"textColor": "#fff"
+			},
+			"color_shades": [
+				{
+					"var": "$violet-light",
+					"hex": "#d78df2"
 				},
-				"color_notes" : ""
-			}
-		]
-	%}
+				{
+					"var": "$violet-dark",
+					"hex": "#3a094c",
+					"textColor": "#fff"
+				}
+			]
+		},
+		{
+			"color_name": "Pink",
+			"color_base": {
+				"var": "$pink",
+				"hex": "#ee4266"
+			},
+			"color_shades": [
+				{
+					"var": "$pink-light",
+					"hex": "#f48aa0"
+				},
+				{
+					"var": "$pink-dark",
+					"hex": "#750b21",
+					"textColor": "#fff"
+				}
+			]
+		},
+		{
+			"color_name": "Yellow",
+			"color_base": {
+				"var": "$yellow",
+				"hex": "#ffd23f"
+			},
+			"color_shades": [
+				{
+					"var": "$yellow-light",
+					"hex": "#ffe180"
+				},
+				{
+					"var": "$yellow-dark",
+					"hex": "#806200",
+					"textColor": "#fff"
+				}
+			]
+		},
+		{
+			"color_name": "Teal",
+			"color_base": {
+				"var": "$teal",
+				"hex": "#3bceac"
+			},
+			"color_shades": [
+				{
+					"var": "$teal-light",
+					"hex": "#83f5da"
+				},
+				{
+					"var": "$teal-dark",
+					"hex": "#196654",
+					"textColor": "#fff"
+				}
+			]
+		},
+		{
+			"color_name": "Green",
+			"color_base": {
+				"var": "$green",
+				"hex": "#0ead69"
+			},
+			"color_shades": [
+				{
+					"var": "$green-light",
+					"hex": "#89f5c7"
+				},
+				{
+					"var": "$green-dark",
+					"hex": "#0a7648",
+					"textColor": "#fff"
+				}
+			]
+		}
+	]
+ %}
 
 	{% set utilityColors = [
-			{
-				"color_name"  : "brandColor",
-				"color_value" : "#f06d06",
-				"color_notes" : ""
+		{
+			"color_name": "brandColor",
+			"color_value": "#f06d06",
+			"color_notes": ""
 
-			},
-			{
-				"color_name"  : "brandHighlight",
-				"color_value" : "#d0b000",
-				"color_notes" : ""
-			},
-			{
-				"color_name"  : "grayDark",
-				"color_value" : "#333333",
-				"color_notes" : ""
-			}
-		]
-	%}
+		}, {
+			"color_name": "brandHighlight",
+			"color_value": "#d0b000",
+			"color_notes": ""
+		}, {
+			"color_name": "grayDark",
+			"color_value": "#333333",
+			"color_notes": ""
+		}
+	]
+ %}
 
 	{% set grayColors = [
-			{
-				"color_name"  : "brandColor",
-				"color_value" : "#f06d06",
-				"color_notes" : ""
+		{
+			"color_name": "brandColor",
+			"color_value": "#f06d06",
+			"color_notes": ""
 
-			},
-			{
-				"color_name"  : "brandHighlight",
-				"color_value" : "#d0b000",
-				"color_notes" : ""
-			},
-			{
-				"color_name"  : "grayDark",
-				"color_value" : "#333333",
-				"color_notes" : ""
-			}
-		]
-	%}
-
+		}, {
+			"color_name": "brandHighlight",
+			"color_value": "#d0b000",
+			"color_notes": ""
+		}, {
+			"color_name": "grayDark",
+			"color_value": "#333333",
+			"color_notes": ""
+		}
+	]
+ %}
 
 	<h3 class="sd-section-subheading">Brand</h3>
-	<div class="sd-swatch-grid">
+
 		{% for color in brandColors %}
 			{{
 				siteColors.colorSwatch(
@@ -67,7 +145,7 @@
 				)
 			}}
 		{% endfor %}
-	</div>
+
 
 	<h3 class="sd-section-subheading">Grays</h3>
 	<div class="sd-swatch-grid">

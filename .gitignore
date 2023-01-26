@@ -1,6 +1,7 @@
 node_modules
 dist
 .*
+!.nvmrc
 !/.gitignore
 !/.babelrc
 yarn-error.log
